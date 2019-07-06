@@ -10,7 +10,7 @@ import {
 import colors from '../styles/Colors';
 
 const InputBar = props => {
-  TouchableNativeFeedback.Ripple({ color: 'red', borderless: true });
+  TouchableNativeFeedback.Ripple({ color: 'red', borderless: false });
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -30,10 +30,7 @@ const InputBar = props => {
 const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    shadowOffset: { width: 0, height: 3 },
-    shadowColor: colors.primaryColor,
-    shadowOpacity: 0.1
+    justifyContent: 'space-between'
   },
   input: {
     flex: 1,
