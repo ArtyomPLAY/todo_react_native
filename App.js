@@ -12,8 +12,9 @@ import StatusBarColored from './src/components/StatusBarColored';
 import Header from './src/components/Header';
 import InputBar from './src/components/InputBar';
 import TodoItem from './src/components/TodoItem';
-import store from './store';
+import Stats from './src/components/Stats';
 
+import store from './store';
 import colors from './src/styles/Colors';
 
 export default class App extends React.Component {
@@ -94,6 +95,8 @@ export default class App extends React.Component {
             );
           }}
         />
+        <Stats />
+
         <KeyboardAvoidingView behavior="padding">
           <InputBar
             todoInput={this.state.todoInput}
@@ -131,7 +134,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.primaryText
+    backgroundColor: colors.background
   },
   empty: {
     alignItems: 'center',
